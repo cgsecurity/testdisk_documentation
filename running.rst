@@ -1,0 +1,114 @@
+Starting the tools
+==================
+
+
+Disk image
+**********
+
+TestDisk and PhotoRec can be used on disk image:
+
+ * raw files (.dd)
+ * Encase (.E01)
+ * splitted Encase files (.E01, E02...)
+
+Splitted raw files are not supported.
+No administrator rights are needed to run testdisk or photorec on disk image.
+
+Examples:
+
+ * ``photorec image.dd`` to carve a raw disk image
+ * ``photorec image.E01`` to recover files from an Encase EWF image
+ * ``photorec 'image.???'`` if the Encase image is split into several files.
+
+.. _running_testdisk_win:
+
+Running TestDisk, PhotoRec or QPhotoRec under Windows
+*****************************************************
+
+Double-click on the executable (``testdisk_win.exe``, ``photorec_win.exe`` or ``qphotorec_win.exe``) from an account in the Administrator Group.
+Administrator rights are necessary to get a low-level access to all medias (hard disk, USB key, Smart Card, etc.).
+Windows UAC (Vista and later) will ask you to confirm that you want to run the executable with administrator rights.
+
+.. note:: Windows users, if you see ``cygwin1.dll not found, c\\cygwin is missing``, extract all the files from the archive before running TestDisk or PhotoRec. 
+
+.. _running_testdisk_linux:
+
+Running TestDisk, PhotoRec under Linux
+**************************************
+
+You need to be root to run TestDisk.
+
+.. code-block:: none
+
+   cd testdisk-7.0
+   sudo ./testdisk_static
+
+
+.. code-block:: none
+
+   cd testdisk-7.0
+   sudo ./photorec_static
+
+.. note:: If your Raid device (ie. Intel raid) is missing, run "sudo dmraid -ay" to activate it.
+
+Running QPhotoRec under Linux X.org X11
+***************************************
+
+QPhotoRec is a Qt5 application, it isn't shipped with the official Linux binaries
+from www.cgsecurity.org. But it is available on most Linux distribution or can be compiled from source.
+To run it in a Terminal,
+
+.. code-block:: none
+
+   sudo qphotorec
+
+Running QPhotoRec under Linux Wayland
+*************************************
+
+To run QPhotoRec in a Terminal,
+
+.. code-block:: none
+
+   xhost +local: 
+   sudo qphotorec
+
+.. _running_testdisk_macos:
+
+Running TestDisk, PhotoRec under macOS
+**************************************
+
+If you are not root, TestDisk (i.e. ``testdisk-7.0/testdisk``) or PhotoRec will restart itself using ``sudo`` after confirmation from your part.
+
+If your administrator account has no password (a blank password), you must give that user a password before using the sudo command:
+
+- Choose Apple menu > System Preferences and click Accounts.
+- Click Change Password.
+
+Terminal doesn't show the password as you type. If you enter the wrong password or a blank password, the command isn't executed and Terminal asks you to try again.
+
+.. _running_fidentify_win:
+
+Running fidentify under Windows
+*******************************
+
+fidentify checks all the files from a directory with the same signatures than photorec. It's useful to check if PhotoRec is able to recover some file extensions/some file formats.
+Run ``cmd``, Windows Command Prompt. ``cd`` is the command to change directory.
+
+.. code-block:: none
+
+   cd testdisk-7.0
+   fidentify_win.exe d:\directory
+
+.. _running_fidentify_linux:
+
+Running fidentify under Linux or macOS
+**************************************
+
+Start a terminal, go in testdisk directory and use fidentify to check if the files present in a directory are recognized. This identification is identical in PhotoRec.
+
+.. code-block:: none
+
+   cd testdisk-7.0
+   ./fidentify_static /home/user/
+
+
