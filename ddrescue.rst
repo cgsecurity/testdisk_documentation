@@ -14,7 +14,7 @@ ddrescue on Linux
 drescue is available on all Linux distribution.
 
  * CentOS: ``yum install ddrescue``
- * Debian/Ubuntu: ``apt install ddrescue``
+ * Debian/Ubuntu: ``apt install gddrescue``
  * Fedora: ``dnf install ddrescue``
 
 Use ``lsblk`` or ``testdisk -lu`` to identify all the disks.
