@@ -10,6 +10,9 @@ They are distributed under the GNU General Public License v2 or later, you can
  * redistribute copies so you can help your neighbor,
  * distribute copies of your modified versions to others under the same license. By doing this you can give the whole community a chance to benefit from your changes.
 
+This documentation can be found online at https://github.com/cgsecurity/testdisk_documentation.
+Anyone can contribute to TestDisk & PhotoRec documentation. We especially welcome the contributions of beginners. In fact, beginners have a distinct advantage over the experts, because they can more easily spot the places where documentation is lacking. If it's only to fix a spelling or grammar error, your contribution is also welcome!
+
 Archives with ready-to-use binaries are available for
 
  * DOS (32-bit x86)
