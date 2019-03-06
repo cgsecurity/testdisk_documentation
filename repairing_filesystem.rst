@@ -29,6 +29,8 @@ fsck starts a filesystem specific command, in example for ext4, it run `fsck.ext
 If you need a fine grained repair, you should read the man page of the command related to the filesystem you want to repair, i.e. `man fsck.ext4`.
 If some files or directories are missing, remember to check the `lost+found` directory at the root of this filesystem.
 
+`ntfsfix` can be used to repair NTFS filesystem followed by Windows `chkdsk` . Note that it resets the NTFS journal file, so it should be used only if Windows failed to repair the filesystem.
+
 Repairing filesystems from macOS
 --------------------------------
 To check an external drive,
