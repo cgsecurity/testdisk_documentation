@@ -1,7 +1,7 @@
 Recovering lost videos from a memory card using PhotoRec
 ========================================================
 
-Due to the way videos are recorded, all videos created by some digital camera (i.e. Canon 5D Mark III) are fragmented on the memory card. Data recovery software, photorec included, expect non fragmented files.
+Due to the way videos are recorded, all videos created by some digital camera (i.e. Canon 5D Mark III, Panasonic DMC-TZ80's photos in burst mode) are fragmented on the memory card. Data recovery software, photorec included, expect non fragmented files.
 
 If all videos (.mov / .mp4) recovered by PhotoRec are unreadable, you are probably in this case. Note this chapter does not concern copies or downloaded files, only files written by some digital camera, not by your computer.
 
@@ -36,3 +36,6 @@ f you do not have the permissions to write to the directory, before using the ca
 Play the resulting test.mov file. If it works, you need to do the same with each couple of files.
 
 This solution works only for videos written in two fragments. Videos from GoPro HD2, Hero3-Black Edition, HERO4 Silver are stored in more than 2 fragments, so special software solutions are needed to recover such videos. This chapter does not concern copies or downloaded files, only files written by some digital camera, not by your computer.
+
+.. note:: Panasonic DMC-TZ80's photos in burst mode are saved as a movie. To extract the photos from this movie, macOS users can import the movie into Photos and save each frame as a single still photo.
+
