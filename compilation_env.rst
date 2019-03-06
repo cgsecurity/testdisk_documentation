@@ -15,10 +15,10 @@ testdisk uses several libraries if available:
 Linux
 -----
 
- * Debian/Ubuntu: ``apt-get install -y build-essential e2fslibs-dev libewf-dev libncurses5-dev libncursesw5-dev ntfs-3g-dev libjpeg-dev uuid-dev zlib1g-dev qtbase5-dev qttools5-dev-tools pkg-config dh-autoreconf git``
- * RHEL/CentOS 5: ``yum install -y buildsys-build e2fsprogs-devel libjpeg-devel ncurses-devel ntfs-3g-devel zlib-devel git``
- * RHEL/CentOS 6 or later: ``yum install -y @buildsys-build desktop-file-utils e2fsprogs-devel libewf-devel libjpeg-devel libuuid-devel ncurses-devel ntfs-3g-devel qt-devel qt5-qtbase-devel zlib-devel git``
- * Fedora: ``dnf install -y @buildsys-build desktop-file-utils e2fsprogs-devel libewf-devel libjpeg-devel libuuid-devel ncurses-devel ntfs-3g-devel qt-devel qt5-qtbase-devel zlib-devel git``
+ * Debian/Ubuntu: ``apt-get install build-essential e2fslibs-dev libewf-dev libncurses5-dev libncursesw5-dev ntfs-3g-dev libjpeg-dev uuid-dev zlib1g-dev qtbase5-dev qttools5-dev-tools pkg-config dh-autoreconf git``
+ * RHEL/CentOS 5: ``yum install buildsys-build e2fsprogs-devel libjpeg-devel ncurses-devel ntfs-3g-devel zlib-devel git``
+ * RHEL/CentOS 6 or later: ``yum install @buildsys-build desktop-file-utils e2fsprogs-devel libewf-devel libjpeg-devel libuuid-devel ncurses-devel ntfs-3g-devel qt-devel qt5-qtbase-devel zlib-devel git``
+ * Fedora: ``dnf install @buildsys-build desktop-file-utils e2fsprogs-devel libewf-devel libjpeg-devel libuuid-devel ncurses-devel ntfs-3g-devel qt-devel qt5-qtbase-devel zlib-devel git``
 
 macOS
 -----
