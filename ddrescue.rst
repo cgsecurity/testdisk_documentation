@@ -1,29 +1,29 @@
 DDRescue: data recovery from damaged disk
 =========================================
 
-A bad sector is a sector on a computer's disk drive that is either inaccessible or unwriteable due to permanent damage, such as physical damage to the disk surface.
+A bad sector is a sector on a computer's disk drive that is either inaccessible or unwritable due to permanent damage, such as physical damage to the disk surface.
 Flash memory may also have "bad sectors" (even if technically there is no sector in flash memory) due to permanent damage like failed flash memory transistors.
 
 Instead of working directly on the damaged disk, it's recommended to create a copy and to work on the clone.
 Two possibilities: create a disk image (a file) or overwrite a new/empty disk.
 
-ddrescue can be found for Linux or macOS. If your computer is using another operating system, no problem, create a Linux LiveUSB! (See :ref:`live-usb`)
+ddrescue can be found for Linux or macOS. If your computer is using another operating system, no problem, create a Linux Live USB! (See :ref:`live-usb`)
 
 ddrescue on Linux
 *****************
-drescue is available on all Linux distribution.
+ddrescue is available on all Linux distribution.
 
  * CentOS: ``yum install ddrescue``
  * Debian/Ubuntu: ``apt install gddrescue``
  * Fedora: ``dnf install ddrescue``
 
-Use ``lsblk`` or ``testdisk -lu`` to identify all the disks.
+Use :command:`lsblk` or :command:`testdisk -lu` to identify all the disks.
 
 ddrescue on macOS
 *****************
 To install ddrescue:
 
- * Press Command+Space and type ``Terminal`` and press enter/return key.
+ * Press Command+Space and type :command:`Terminal` and press enter/return key.
  * Run in Terminal app:
 
 .. code-block:: none
@@ -32,8 +32,8 @@ To install ddrescue:
    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
    brew install ddrescue
 
-Done! You can now use ``ddrescue``.
-Use ``diskutil list`` to get information on all available disks and their partitioning.
+Done! You can now use :command:`ddrescue`.
+Use :command:`diskutil list` to get information on all available disks and their partitioning.
 
 DDRescue: disk to file image
 ****************************
@@ -41,13 +41,13 @@ It's the recommended method for forensic purpose.
 You need enough space to store the file: if you want to create a clone of a 1TB disk, you need at least 1TB free on a filesystem.
 Avoid FAT filesystem for the destination as they are limited to 4GB file.
 
-In the following example, an image named sdb.dd will be created from the second disk /dev/sdb.
+In the following example, an image named :file:`sdb.dd` will be created from the second disk :file:`/dev/sdb`.
 
 .. code-block:: none
 
    ddrescue /dev/sdb sdb.dd sdb.log
 
-The log file ``sdb.log`` can be used to restart the recovery.
+The log file :file:`sdb.log` can be used to restart the recovery.
 It can take a few hours to several days to clone a disk with a lot of bad sectors.
 
 DDRescue: disk to disk copy
@@ -56,13 +56,13 @@ The destination disk must be at least as big as the original one. Be careful, tw
 
 Ie. WD10EZRZ and WD10EZEX are two models sold by Western Digital as 1TB model, in fact the first one is 1,000,000 MB, the second one 1,000,204 MB.
 
-Before beginning, disconnect all disks, usb device, cd/dvd reader/writer not needed: there is less chance to overwrite the wrong disk.
+Before beginning, disconnect all disks, USB device, CD/DVD reader/writer not needed: there is less chance to overwrite the wrong disk.
 
 .. code-block:: none
 
    ddrescue /dev/sdb /dev/sdc sdb.log
 
-The log file ``sdb.log`` can be used to restart the recovery.
+The log file :file:`sdb.log` can be used to restart the recovery.
 
 
 ddrutility: restricting ddrescue to NTFS allocated data block

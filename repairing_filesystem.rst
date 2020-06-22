@@ -7,8 +7,8 @@ So if you have access to some of your files but not all, it's recommended to bac
 Repairing filesystems from Windows
 ----------------------------------
 
-Windows can read and write files from FAT, exFAT and NTFS filesystem. The `chkdsk` command is used to check and repair filesystems.
-Run `cmd` (Right-click Run As Administrator)
+Windows can read and write files from FAT, exFAT and NTFS filesystem. The :command:`chkdsk` command is used to check and repair filesystems.
+Run :command:`cmd` (Right-click Run As Administrator)
 
 .. code-block:: none
 
@@ -18,18 +18,18 @@ Run `cmd` (Right-click Run As Administrator)
 Repairing filesystems from Linux
 --------------------------------
 
-Linux can read and write from a large variety of filesystems. The `fsck` generic command is used to run a filesystem check.
-To check and repair automaticaly the filesystem on /dev/sda, run as root
+Linux can read and write from a large variety of filesystems. The :command:`fsck` generic command is used to run a filesystem check.
+To check and repair automatically the filesystem on /dev/sda, run as root
 
 .. code-block:: none
 
    fsck -y /dev/sda1
 
-fsck starts a filesystem specific command, in example for ext4, it run `fsck.ext4`.
-If you need a fine grained repair, you should read the man page of the command related to the filesystem you want to repair, i.e. `man fsck.ext4`.
-If some files or directories are missing, remember to check the `lost+found` directory at the root of this filesystem.
+fsck starts a filesystem specific command, in example for ext4, it run :command:`fsck.ext4`.
+If you need a fine grained repair, you should read the man page of the command related to the filesystem you want to repair, i.e. :command:`man fsck.ext4`.
+If some files or directories are missing, remember to check the :file:`lost+found` directory at the root of this filesystem.
 
-`ntfsfix` can be used to repair NTFS filesystem followed by Windows `chkdsk` . Note that it resets the NTFS journal file, so it should be used only if Windows failed to repair the filesystem.
+:command:`ntfsfix` can be used to repair NTFS filesystem followed by Windows :command:`chkdsk` . Note that it resets the NTFS journal file, so it should be used only if Windows failed to repair the filesystem.
 
 Repairing filesystems from macOS
 --------------------------------
@@ -40,7 +40,7 @@ To check an external drive,
    sudo diskutil list
    sudo fsck /dev/disk1s1
 
-You may have to repeat the fsck command several times until no remaining error is reported.
+You may have to repeat the :command:`fsck` command several times until no remaining error is reported.
 
 If you get Invalid b-tree node size, you can try
 
@@ -54,7 +54,7 @@ The boot sector is a sector containing information required to access any files 
 FAT32 and NTFS filesystems have a main boot sector and a backup. If the main boot sector is damaged, the filesystem is listed as raw or unreadable.
 TestDisk is able to use the backup boot sector to repair the main boot sector:
 
- * start testdisk
+ * start TestDisk
  * select the device containing the partition (avoid drive letter like D:)
  * confirm the partition table type
  * go in the Advanced menu
@@ -74,9 +74,9 @@ TestDisk: Repairing FAT boot sector
 -----------------------------------
 
 The first sector of a FAT filesystem is named boot sector. It contains the main filesystem properties and some small code necessary only to start the computer from this partition.
-If the boot sector is damaged, it's impossible to access your data. Windows `chkdsk` or Linux `fsck` can not repair a filesystem without a valid boot sector, they return error message like *Chkdsk is not available for RAW drives*. Fortunately TestDisk can find all the parameters that need to be recorded in the boot sector and rewrite this sector, so further repair operations or normal access can be conducted.
+If the boot sector is damaged, it's impossible to access your data. Windows :command:`chkdsk` or Linux :command:`fsck` can not repair a filesystem without a valid boot sector, they return error message like *Chkdsk is not available for RAW drives*. Fortunately TestDisk can find all the parameters that need to be recorded in the boot sector and rewrite this sector, so further repair operations or normal access can be conducted.
 
- * start testdisk
+ * start TestDisk
  * select the device containing the partition (avoid drive letter like D:)
  * confirm the partition table type
  * go in the Advanced menu
@@ -99,7 +99,7 @@ TestDisk: Repairing NTFS boot sector
 ------------------------------------
 
 The first sector of a NTFS filesystem is named boot sector. It contains the main filesystem properties and some small code necessary only to start the computer from this partition.
-If the boot sector is damaged, it's impossible to access your data. Windows `chkdsk` or Linux `fsck` can not repair a filesystem without a valid boot sector, they return error message like *Chkdsk is not available for RAW drives*. Fortunately TestDisk can find all the parameters that need to be recorded in the boot sector and rewrite this sector, so further repair operations or normal access can be conducted.
+If the boot sector is damaged, it's impossible to access your data. Windows :command:`chkdsk` or Linux :command:`fsck` can not repair a filesystem without a valid boot sector, they return error message like *Chkdsk is not available for RAW drives*. Fortunately TestDisk can find all the parameters that need to be recorded in the boot sector and rewrite this sector, so further repair operations or normal access can be conducted.
 
  * start testdisk
  * select the device containing the partition (avoid drive letter like D:)
@@ -121,7 +121,7 @@ TestDisk: repairing ext2/3/4 filesystem superblock
 --------------------------------------------------
 
 1024 bytes after the beginning of the ext2/3/4 filesystem sits the superblock. It contains the main filesystem properties.
-With a damaged main superblock, it's not possible to mount and access the files normally. Fortunately copies are the main superblock are spread over the filesystem. To be precise, they are not exact copy of the main superblock, each copy contains its own location to prevent confusion between copies and the original. TestDisk can search for alternate superblocks.
+With a damaged main superblock, it's not possible to mount and access the files normally. Fortunately copies of the main superblock are spread over the filesystem. To be precise, they are not exact copy of the main superblock, each copy contains its own location to prevent confusion between copies and the original. TestDisk can search for alternate superblocks.
 
  * start testdisk
  * select the device containing the partition
@@ -160,7 +160,7 @@ With a damaged main superblock, it's not possible to mount and access the files 
                                Return to Advanced menu
 
 If superblock 0 is listed, it means the main superblock is correct. If it's damaged, this line will be missing,
-use next superblock and block size information to run fsck.
+use next superblock and block size information to run :command:`fsck`.
 
 .. code-block:: none
 
@@ -172,7 +172,7 @@ Repairing HFS/HFS+ volume header using TestDisk
 The volume header is locate 1024 bytes after the beginning of the HFS/HFS+ filesystem. If it is damaged, it is not possible to access files normally.
 TestDisk is able to use the backup volume header to repair the main volume header:
 
- * start testdisk
+ * start TestDisk
  * select the device containing the partition
  * confirm the partition table type
  * go in the Advanced menu
@@ -188,8 +188,8 @@ In this case,
 * Quit
 * restart the computer
 
-Repairing Bitlocker volume
+Repairing BitLocker volume
 --------------------------
 
-Repair-bde can reconstruct critical parts of the drive and salvage recoverable data as long as a valid recovery password or recovery key is used to decrypt the data.
+:command:`Repair-bde` can reconstruct critical parts of the drive and salvage recoverable data as long as a valid recovery password or recovery key is used to decrypt the data.
 See https://technet.microsoft.com/en-us/library/ff829851(v=ws.11).aspx

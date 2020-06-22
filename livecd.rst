@@ -37,6 +37,9 @@ Linux (command line)
 Wait until the command completes.
 If you receive ``dd: invalid status flag: ‘progress’ error``, your dd version doesn't support ``status=progress`` option and you'll need to remove it (and you won't see writing progress). 
 
+.. warning:: The :command:`dd` command is very powerful and can destroy any existing data on the specified device.
+   Make **absolutely sure** of the device name to write to and do not mistype the device name when using :command:`dd`!
+
 Linux (GNOME)
 -------------
 
@@ -53,9 +56,9 @@ OS X
 ----
  
  *  Open a terminal
- *  Run ``diskutil list``. This will list all disks connected to the system, as ``/dev/rdisk1``, ``/dev/rdisk2`` and so on. Identify - very carefully! - which one corresponds to the USB stick you wish to use. Hereafter, we'll assume it was ``/dev/rdisk2`` - modify the commands as appropriate for your stick.
- *  Run ``diskutil unmountDisk /dev/rdisk2``
- *  Type ``dd if=``, then drag and drop the Fedora image file to the terminal window - this should result in its filesystem location being appended to the command. Now complete the command with ``of=/dev/rdisk2 bs=1m``, but *don't hit Enter yet*. You should wind up with something like ``sudo dd if=/Volumes/Images/Fedora-Live-Desktop-x86_64-20-1.iso of=/dev/rdisk2 bs=1m``
+ *  Run :command:`diskutil list`. This will list all disks connected to the system, as :file:`/dev/rdisk1`, :file:`/dev/rdisk2` and so on. Identify - very carefully! - which one corresponds to the USB stick you wish to use as destination. Hereafter, we'll assume it was :file:`/dev/rdisk2`` - modify the commands as appropriate for your stick.
+ *  Run :command:`diskutil unmountDisk /dev/rdisk2`
+ *  Type :command:`dd if=`, then drag and drop the Fedora image file to the terminal window - this should result in its filesystem location being appended to the command. Now complete the command with :command:`of=/dev/rdisk2 bs=1m`, but *don't hit Enter yet*. You should wind up with something like :command:`sudo dd if=/Volumes/Images/Fedora-Live-Desktop-x86_64-20-1.iso of=/dev/rdisk2 bs=1m`
  *  Double-check you have the correct disk number and you're really, really sure you don't need any of the data on the USB stick!
  *  Hit Enter
 

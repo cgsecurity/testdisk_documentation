@@ -18,7 +18,7 @@ Archives with ready-to-use binaries are available for
  * DOS (32-bit x86)
  * Microsoft Windows (32-bit x86 or 64-bit x64)
  * Linux (32-bit x86 or 64-bit x64)
- * Mac OS X (PowerPC or Intel) / OS X / macOS
+ * macOS / Mac OS X (PowerPC or Intel) / OS X
  * Marvell 88F628x Linux
 
 TestDisk & PhotoRec can also be compiled for other platforms, notably

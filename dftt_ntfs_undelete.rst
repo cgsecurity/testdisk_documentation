@@ -4,12 +4,12 @@ Download the small `NTFS filesystem <https://sourceforge.net/projects/dftt/files
 
 To undelete all files manually,
 
- * run `testdisk 7-ntfs-undel.dd`
+ * run :command:`testdisk 7-ntfs-undel.dd`
  * Choose `Proceed`.
  * A non partitioned media is detected automatically, press Enter to confirm.
  * Choose `Undelete`.
 
-TestDisk lists all lost files successfully. The alternate data stream is listed as `./mult1.dat:ADS`, alternate streams are not listed in Windows Explorer, and their size is not included in the file's size. Malware has used alternate data streams to hide code. As a result, malware scanners and other special tools now check for alternate data streams. Forensics analyst should also search for them as they may be used to hide documents.
+TestDisk lists all lost files successfully. The alternate data stream is listed as :file:`./mult1.dat:ADS`, alternate streams are not listed in Windows Explorer, and their size is not included in the file's size. Malware has used alternate data streams to hide code. As a result, malware scanners and other special tools now check for alternate data streams. Forensics analyst should also search for them as they may be used to hide documents.
 
  * Press 'C' (uppercase) to copy all selected files and directories.
  * Choose a destination to copy all the files: use the arrow keys (up, down, left, right) to navigate, you can also use the enter key to enter into a directory.

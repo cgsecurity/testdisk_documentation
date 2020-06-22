@@ -1,8 +1,8 @@
 SMART status - Disk health monitoring
 =====================================
-The smartmontools package contains two utility programs (smartctl and smartd) to control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (SMART) built into most modern ATA/SATA, SCSI/SAS and NVMe disks. In many cases, these utilities will provide advanced warning of disk degradation and failure.
+The smartmontools package contains two utility programs (:command:`smartctl` and :command:`smartd`) to control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (SMART) built into most modern ATA/SATA, SCSI/SAS and NVMe disks. In many cases, these utilities will provide advanced warning of disk degradation and failure.
 
-This package is installed by default on most Linux distribution. For Windows and macOS, there are respectively a setup.exe and an dmg available from https://sourceforge.net/projects/smartmontools/files/smartmontools/
+This package is installed by default on most Linux distribution. For Windows and macOS, there are respectively a :file:`setup.exe` and an :file:`dmg` available from https://sourceforge.net/projects/smartmontools/files/smartmontools/
 
 
 .. code-block:: none

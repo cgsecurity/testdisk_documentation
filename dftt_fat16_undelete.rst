@@ -6,7 +6,7 @@ This test image is a 6MB FAT16 file system with six deleted files and two delete
 
 To undelete all files manually,
 
- * run `testdisk 6-fat-undel.dd`
+ * run :command:`testdisk 6-fat-undel.dd`
  * Choose `Proceed`.
  * A non partitioned media is detected automatically, press Enter to confirm.
  * Choose `Undelete`.
@@ -27,7 +27,7 @@ All files are copied.
  * Choose [Quit] until you have exited all menus
 
 The usual filenames for a FAT filesystem are composed of 8 chars for the name and 3 for the extension.
-When a file is deleted, the first character of the filename is overwritten. TestDisk represents the lost char by a underscore `_` (e.g. `_RAG1.DAT` instead of `FRAG1.DAT`)
+When a file is deleted, the first character of the filename is overwritten. TestDisk represents the lost char by a underscore `_` (e.g. :file:`_RAG1.DAT` instead of :file:`FRAG1.DAT`)
 If a long filename (> 8 characters) is present, it will be use instead. A benefit is that the whole filename can be displayed (e.g. `System Volume Information`)
 
 All files are recovered successfully except the 3 fragmented files.

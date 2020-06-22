@@ -17,7 +17,7 @@ Log creation
  * Choose Create unless you have a reason to append data to the log or if you execute TestDisk from read only media and can't create it elsewhere.
  * Press Enter to proceed.
 
-.. note::  Windows users, if you have difficulties to find the testdisk.log file, consult https://support.microsoft.com/en-us/kb/865219 on how to show file name extensions in Windows Explorer.
+.. note::  Windows users, if you have difficulties to find the :file:`testdisk.log` file, consult https://support.microsoft.com/en-us/kb/865219 on how to show file name extensions in Windows Explorer.
 
 Disk selection
 --------------
@@ -26,9 +26,9 @@ All hard drives should be detected and listed with the correct size by TestDisk.
  * Use up/down arrow keys to select your hard drive with the lost partition/s.
  * Press Enter to Proceed.
 
-.. note:: macOS - If available, use raw device ``/dev/rdisk*`` instead of ``/dev/disk*`` for faster data transfer.
+.. note:: macOS - If available, use raw device :file:`/dev/rdisk*` instead of :file:`/dev/disk*` for faster data transfer.
 
-.. warning:: Windows - Do not select C:, D: or another drive letter. It's useless to search partitions inside a partition.
+.. warning:: Windows - Do not select :file:`C:`, :file:`D:` or another drive letter. It's useless to search partitions inside a partition.
 
 Partition table type selection
 ------------------------------

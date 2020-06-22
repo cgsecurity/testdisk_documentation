@@ -7,8 +7,8 @@ Once you have downloaded the source archive from https://www.cgsecurity.org/wiki
 
 .. code-block:: none
 
-   tar xjf testdisk-7.1-WIP.tar.bz2
-   cd testdisk-7.1-WIP
+   tar xjf testdisk-7.2-WIP.tar.bz2
+   cd testdisk-7.2-WIP
    ./configure && make
 
 
@@ -19,7 +19,7 @@ Compilation from git repository
 
    git clone https://git.cgsecurity.org/testdisk.git
 
-If you have already cloned the project, to update your local copy, run ``git pull`` from the testdisk directory. 
+If you have already cloned the project, to update your local copy, run :command:`git pull` from the :file:`testdisk` directory. 
 
 .. code-block:: none
 

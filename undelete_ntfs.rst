@@ -1,7 +1,7 @@
 TestDisk: undelete file for NTFS
 ********************************
 
-Start testdisk
+Start TestDisk
 --------------
 
 * :ref:`running_testdisk_win`
@@ -21,7 +21,7 @@ All hard drives should be detected and listed with the correct size by TestDisk.
  * Use up/down arrow keys to select your hard drive with the lost partition/s.
  * Press Enter to Proceed.
 
-macOS If available, use raw device ``/dev/rdisk*`` instead of ``/dev/disk*`` for faster data transfer.
+macOS If available, use raw device :file:`/dev/rdisk*` instead of :file:`/dev/disk*` for faster data transfer.
 
 Partition table type selection
 ------------------------------
@@ -52,4 +52,4 @@ File recovery is completed
 --------------------------
 When the NTFS file recovery is finished, choose Quit to exit.
 
-If testdisk has been unable to find your lost data, try PhotoRec instead.
+If TestDisk has been unable to find your lost data, try PhotoRec instead.

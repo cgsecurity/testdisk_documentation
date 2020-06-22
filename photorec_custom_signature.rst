@@ -8,7 +8,7 @@ To check if a file format is already recognized, you can
 
  * consult the `file formats <https://www.cgsecurity.org/wiki/File_Formats_Recovered_By_PhotoRec>`_.
  * submit a sample file to the `PhotoRec online checker <https://www.cgsecurity.org/photorec/>`_.
- * use fidentify on a file sample (See :ref:`running_fidentify_win` or :ref:`running_fidentify_linux`)
+ * use :command:`fidentify` on a file sample (See :ref:`running_fidentify_win` or :ref:`running_fidentify_linux`)
 
 .. code-block:: none
 
@@ -35,7 +35,7 @@ The magic value can be composed of
  * hexadecimal data, e.g. 0x12, 0x1234, 0x123456... Note that `0x123456`, `0x12 0x34 0x56` and `0x12, 0x34, 0x56` are equivalents.
  * space or comma delimiters are ignored
 
-By using an hexadecimal editor, you can see that the pfi file from our example begins by a distinctive string `PhotoFiltre Image` at offset 0.
+By using an hexadecimal editor, you can see that the :file:`pfi` file from our example begins by a distinctive string `PhotoFiltre Image` at offset 0.
 
 .. code-block:: none
 
@@ -62,10 +62,10 @@ or if you prefer hexadecimal
 
 	pfi 0 0x50686f746f46696c74726520496d616765
 
-From fidentify/PhotoRec point of view, the signatures are identical.
+From :command:`fidentify`/:command:`photorec` point of view, the signatures are identical.
 
 .. warning::
-   Be careful, hexdump displays non-printable chars as dots. The following signature is wrong:
+   Be careful, :command:`hexdump` displays non-printable chars as dots. The following signature is wrong:
 
    .. code-block:: none
 
@@ -84,9 +84,9 @@ File location
 
 PhotoRec searches for the signature file named
 
- * Windows: `photorec.sig` in the `USERPROFILE` or `HOMEPATH` directory, e.g. `C:\\Documents and Settings\\bob\\` or `C:\\Users\\bob`.
- * Linux and macOS: `.photorec.sig` in the `HOME` directory, e.g. `/home/bob`
- * `photorec.sig` in the current directory
+ * Windows: :file:`photorec.sig` in the `USERPROFILE` or `HOMEPATH` directory, e.g. :file:`C:\\Documents and Settings\\bob\\` or :file:`C:\\Users\\bob`.
+ * Linux and macOS: :file:`.photorec.sig` in the `HOME` directory, e.g. :file:`/home/bob`
+ * :file:`photorec.sig` in the current directory
 
 This file doesn't exist by default, you need to create one.
 Using a text editor (e.g. notepad, vim...), create the signature file and add the signature you have identified.
@@ -94,14 +94,14 @@ Using a text editor (e.g. notepad, vim...), create the signature file and add th
 Check your custom signature with fidentify
 ******************************************
 
-`fidentify` now perfectly identify the file
+:command:`fidentify` now perfectly identify the file
 
 .. code-block:: none
 
 	[kmaster@adsl ~]$ fidentify /home/kmaster/src/testfiles/sample.pfi
 	/home/kmaster/src/testfiles/sample.pfi: pfi
 
-If fidentify doesn't recognize the signature,
+If :command:`fidentify` doesn't recognize the signature,
 
  * check your signature, it may be incorrect
  * **verify that the signature file is a true ASCII text file**. It must not begin by `EF BB BF` (UTF-8 Byte Order Mark) or `FF FE` (UTF-16 LE BOM) by example.

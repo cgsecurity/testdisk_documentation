@@ -6,7 +6,7 @@ DFRWS 2006 Forensics Challenge
 
 DFRWS 2006 Forensics Challenge is a data carving challenge. It's possible to use PhotoRec to recover most files:
 
- * run `photorec dfrws-2006-challenge.raw`
+ * run :command:`photorec dfrws-2006-challenge.raw`
  * Choose Proceed
  * Go In Options menu
  * Set "Paranoid : Yes (Brute force enabled)"

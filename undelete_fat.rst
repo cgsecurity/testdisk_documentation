@@ -9,7 +9,7 @@ exFAT can be found on large memory card, large USB keys and hard disk.
 ext2 is a Linux filesystem. It has been superseded by ext3 and ext4, so it's not found often now.
 With ext3 and ext4, it's possible to find the names of the deleted files but the location of the deleted data isn't available anymore, so even if ext3/ext4 is similar to ext2, it's not possible to recover lost files using TestDisk.
 
-Start testdisk
+Start TestDisk
 --------------
 
 * :ref:`running_testdisk_win`
@@ -58,4 +58,4 @@ File recovery is completed
 --------------------------
 When you get your files back, use Quit to exit.
 
-If testdisk has been unable to find your lost data, try PhotoRec instead.
+If TestDisk has been unable to find your lost data, try PhotoRec instead.

@@ -198,8 +198,8 @@ Automating recovery using PhotoRec
 General syntax:
 
  * /debug: switch on debug mode
- * /log: switch on logging (a log file named ``photorec.log`` will be created/appended to in the current working directory
- * /logname file.log: log will be written to file.log instead of photorec.log
+ * /log: switch on logging (a log file named :file:`photorec.log` will be created/appended to in the current working directory
+ * /logname file.log: log will be written to :file:`file.log` instead of :file:`photorec.log`
  * /d recup_dir: specify directory to store the recovered files into. This should be on a device different from the one you are recovering from. PhotoRec will add a numeric extension to the path specified, starting with ".1" - and increase this number as long as a directory with this name already exists.
  * /cmd: introduces the command section for scripted run
  * <device>: the device (or image file) to recover from (Hint: use single-quote if the image file contains spaces)
@@ -222,7 +222,7 @@ Recover from the first IDE drives i386 partition #5, which is using ext2/ext3/ex
    photorec /debug /log /cmd /dev/hda partition_i386,options,mode_ext2,5,search
 
 
-Recover from a given disk image file named "disk.dmp" which only has a single ext4 partition (or a part of it)
+Recover from a given disk image file named :file:`disk.dmp` which only has a single ext4 partition (or a part of it)
 Restore all file types known to PhotoRec to ``/mnt/recover/disk``.
 
 .. code-block:: none
@@ -230,7 +230,7 @@ Restore all file types known to PhotoRec to ``/mnt/recover/disk``.
    photorec /debug /log /d /mnt/recover/disk /cmd disk.dmp options,mode_ext2, \
      fileopt,everything,enable,search
    
-The same without debug and log - but recover only `*.gif` and `*.jpg`
+The same without debug and log - but recover only :file:`*.gif` and :file:`*.jpg`
 
 .. code-block:: none
 
@@ -244,7 +244,7 @@ Recover jpg from the freespace of the first partition
    photorec /cmd /dev/hda fileopt,everything,disable,jpg,enable,freespace,search
 
 
-Recover all files from freespace from each partition as detected by testdisk
+Recover all files from freespace from each partition as detected by TestDisk
 
 .. code-block:: none
 

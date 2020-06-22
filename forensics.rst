@@ -5,7 +5,7 @@ The content of a disk may be modified by simply connecting it to a computer:
 
  * LVM driver will sync two RAID1-like volumes if they are out of sync
  * Linux Raid and fake Raid will also resync the disks if they are out of sync
- * Auto-mouting of the filesystem will modify the last-mount date and the mount count
+ * Auto-mounting of the filesystem will modify the last-mount date and the mount count
  * ext3 and ext4 will replay the journal if the filesystem is dirty.
  * The NTFS file system may attempt to commit or rollback unfinished transactions, and/or change flags on the volume to mark it as "in use".
  * The operating system will update the access time for any file accessed
@@ -21,7 +21,7 @@ updates in service area each time the device is powered-on.). It remains the bes
 Without a hardware write blocker, it's still possible to reduce the risks of accidental modifications.
 Using a Linux computer without graphical interface and without auto-mounting *may* be considered a good enough solution.
 
-Under Linux, `blockdev` or `hdparm` can be used to switch a disk to read-only:
+Under Linux, :command:`blockdev` or :command:`hdparm` can be used to switch a disk to read-only:
 
 .. code-block:: none
 
@@ -38,7 +38,7 @@ Loopback device is a safer alternative:
    losetup -r /dev/loop0 /dev/sdb
    testdisk /dev/loop0
 
-This way testdisk is forced to open the device in read-only.
+This way TestDisk is forced to open the device in read-only.
 
 
 Loopback can also be used to mount a filesystem in read-only:
