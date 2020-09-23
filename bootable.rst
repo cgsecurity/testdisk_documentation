@@ -27,12 +27,24 @@ If you still have the problem,
  * Run :command:`fixboot` to repair NTFS boot sector.
  * Check :file:`c:\\boot.ini` content
 
+
 Windows Vista/Windows 7/..., Windows Server 2008/...
 ----------------------------------------------------
+
  * Run :command:`bootrec.exe /fixmbr` from the Recovery Console
  * For legacy / PC Intel partition table, check :file:`c:\\boot.ini` content
  * For EFI GPT, check the output of :command:`bcdedit /v`. To modify the settings, use the :command:`bcdedit /set` command.
  * Run :command:`bootrec.exe /fixboot` to repair NTFS boot sector.
+
+
+Boot Windows in safe mode or from a Windows DVD (Not the DVD from the computer manufacturer) as described in https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode and select
+
+ * Troubleshoot
+ * Advanced Options
+ * Command Prompt
+ * Run :command:`chkdsk /f c:` to check an repair the filesystem
+ * If it doesn't solve the boot problem, try Startup Repair.
+
 
 Linux/FreeBSD
 -------------
