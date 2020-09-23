@@ -37,6 +37,19 @@ As root,
 
    apt install testdisk
 
+macOS
+---------------
+Install brew from https://brew.sh if you haven't do so:
+
+.. code-block:: none
+
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+Then, install testdisk
+
+.. code-block:: none
+
+   brew install testdisk
 
 Official binaries
 *****************
@@ -56,12 +69,12 @@ Installation of official binaries for Windows
 Installation of official binaries for macOS
 -------------------------------------------
 
- * Download the archive from https://www.cgsecurity.org/wiki/TestDisk_Download
+Download the archive from https://www.cgsecurity.org/wiki/TestDisk_Download
 
-    * macOS / Mac OS X Intel / OS X
-    * Mac OS X PowerPC for very old Mac (Mac OS X <= 10.5)
+   * macOS / Mac OS X Intel / OS X
+   * Mac OS X PowerPC for very old Mac (Mac OS X <= 10.5)
 
- * Extract all the files including the subdirectories
+Extract all the files including the subdirectories
 
 Installation of official binaries for Linux
 -------------------------------------------
