@@ -29,7 +29,7 @@ To install ddrescue:
 .. code-block:: none
 
 
-   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
    brew install ddrescue
 
 Done! You can now use :command:`ddrescue`.
