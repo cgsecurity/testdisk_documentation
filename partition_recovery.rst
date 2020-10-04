@@ -36,6 +36,8 @@ TestDisk displays the partition table types.
  * Select the partition table type - usually the default value is the correct one as TestDisk auto-detects the partition table type.
  * Press Enter to Proceed.
 
+.. note:: You should select the partition table type that was used when you had access to your data.
+
 Analyze current partition table
 -------------------------------
 

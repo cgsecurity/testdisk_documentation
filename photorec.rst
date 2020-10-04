@@ -52,6 +52,9 @@ In ``FileOpts``, enable or disable the recovery of certain file types, for examp
 
 The whole list of file formats recovered by PhotoRec contains more than 300 file families representing more than 480 file extensions.
 
+.. warning:: For some file formats, PhotoRec can determine the original filesize from the file header. For the others, PhotoRec stops appending data to the file it is currently recovering when a new file header is found. So disabling too many file formats leads to numerous overlarge files.
+
+
 File system type
 ****************
 Once a partition has been selected and validated with ``Search``, PhotoRec needs to know how the data blocks are allocated.
