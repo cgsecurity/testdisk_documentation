@@ -78,6 +78,9 @@ Choose the directory where the recovered files should be written. Use the arrow 
 
 .. warning:: Do not store the recovered files on the source filesystem. Otherwise lost data may be overwritten and definitively lost.
 
+.. warning:: Avoid choosing a FAT32 filesystem for the destination as it doesn't handle file over 4 GB.
+
+
 Recovery in progress
 ********************
 Number of recovered files is updated in real time.
