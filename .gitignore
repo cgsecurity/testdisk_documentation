@@ -1,5 +1,6 @@
 *~
+*.bak
 _build/doctrees/
 _build/html/
 _build/pdf/
-_build/latex/testdisk.*
+_build/latex/
