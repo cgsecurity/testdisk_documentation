@@ -115,9 +115,74 @@ Letter meaning:
  * b=broken
  * t=jpeg embedded thumbnail
 
-The number is calculated by using the file location minus the partition offset divided by the block size. For some filesystems like NTFS, exFAT, ext2/3/4, this number may be identical to the original cluster/block number.
+The number is calculated by using the file location minus the partition offset divided by the sector size. For some filesystems like NTFS, exFAT, ext2/3/4, this number may be identical to the original cluster/block number when the block size is equal to the sector size.
+
 Using metadata information embedded in the recovered file, the file may be renamed to include the documentation title (example, Microsoft Office doc/xls/ppt or Acrobate pdf files) like
 :file:`recup_dir.1/f0016741_Prudent_Engineering_Practice_for_Cryptographic_Protocols.pdf`.
 
 By default, the file creation and modification times are corresponding to the data recovery time. Some file format may embedded date/time information (ie. jpg pictures taken by a digital camera, Microsoft Office documents), PhotoRec will try to reuse them. This way, it may be easier to sort the recovered files. For forensics purpose, do not trust this information blindly: the date/time information may be off by a few hours (no or wrong timezone information) or totally wrong (the original device clock may have a wrong date/time setting.)
 
+PhotoRec: matching filename and data location
+*********************************************
+Let's take an example. PhotoRec has recovered a file and named it as :file:`f0017088.txt`.
+This file begins at sector 17088 of this partition.
+
+It comes from a Linux partition starting at sector 411648 as seen in PhotoRec interface
+
+.. code-block:: none
+
+   > 2 P MS Data                   411648    1460223    1048576 [/boot] [/boot]
+
+The :file:`report.xml` file records the sector size (sectorsize) and the partition offset (img_offset)
+
+.. code-block:: none
+
+  <source>
+    <image_filename>/dev/sda</image_filename>
+    <sectorsize>512</sectorsize>
+    <device_model>CT500MX500SSD1</device_model>
+    <image_size>500107862016</image_size>
+    <volume>
+      <byte_runs>
+        <byte_run offset='0' img_offset='210763776' len='536870912'/>
+      </byte_runs>
+      <block_size>4096</block_size>
+    </volume>
+  </source>
+
+The command :command:`testdisk -lu` shows the same information:
+
+.. code-block:: none
+   
+   Disk /dev/sda - 500 GB / 465 GiB - CHS 60801 255 63
+   Sector size:512
+   ...
+
+   Disk /dev/sda - 500 GB / 465 GiB - CHS 60801 255 63
+        Partition			Start        End    Size in sectors
+    1 P EFI System                  2048     411647     409600 [EFI System Partition]
+    2 P MS Data                   411648    1460223    1048576 [/boot] [/boot]
+        ext4 blocksize=4096 Large_file Sparse_SB Recover
+
+
+An offset of 210763776 bytes is an offset of 411648 sectors for a sector size of 512 bytes.
+This file begins at sector 411648 from the beginning of the disk.
+
+
+:file:`report.xml` shows that the file was beginning at 219512832 bytes from the start of the disk.
+
+.. code-block:: none
+   
+
+  <fileobject>
+    <filename>f0017088.txt</filename>
+    <filesize>1024</filesize>
+    <byte_runs>
+      <byte_run offset='0' img_offset='219512832' len='4096'/>
+    </byte_runs>
+  </fileobject>
+
+(219512832-210763776)/512=17088: this file is beginning at sector 17088 of this partition.
+
+For NTFS, exFAT, ext2/3/4, if you need to get the first cluster or block of the file, divide the offset by the cluster size.
+In this example, the first cluster is 2136: (219512832-210763776)/4096=2136 or if you are using the filename: 17088*512/4096=2136
