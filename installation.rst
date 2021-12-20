@@ -31,6 +31,14 @@ If epel repository is disabled on your CentOS, use
 
    yum install --enablerepo=epel testdisk qphotorec
 
+ClearLinux
+----------
+
+To install TestDisk bundle on `ClearLinux <https://clearlinux.org/>`_, run
+
+.. code-block:: none
+
+  sudo swupd bundle-add testdisk
 
 Debian
 ------
@@ -127,13 +135,11 @@ Installation of official binaries for macOS
 
 Download the archive from https://www.cgsecurity.org/wiki/TestDisk_Download
 
-   * macOS / Mac OS X Intel / OS X 32-bit (Mac OS X <= 10.14)
-   * Mac OS X PowerPC for very old Mac (Mac OS X <= 10.5)
+   * macOS / Mac OS X Intel / OS X 64-bit (macOS >= 10.6)
+   * macOS / Mac OS X Intel / OS X 32-bit (macOS <= 10.14)
+   * Mac OS X PowerPC for very old Mac (macOS <= 10.5)
 
 Extract all the files including the subdirectories
-
-Currently there is no official binaries for macOS 64-bits, so for macOS Catalina (10.15) and Big Sur (10.16),
-see `macOS: Installation via Homebrew`_
 
 Installation of official binaries for Linux
 -------------------------------------------
