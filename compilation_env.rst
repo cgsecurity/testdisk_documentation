@@ -58,7 +58,7 @@ Decompress and compile them (Replace :file:`/User/kmaster` by the correct path)
   tar xzf e2fsprogs-1.46.2.tar.gz
   tar xzf ntfs-3g_ntfsprogs-2017.3.23.tgz
   tar xzf testdisk-7.2-WIP.tar.bz2
-  cd e2fsprogs-1.46.2 && confifure && make && cd ..
+  cd e2fsprogs-1.46.2 && configure && make && cd ..
   cd ntfs-3g_ntfsprogs-2017.3.23 && /configure --disable-ntfs-3g --disable-nfconv && make && cd ..
   mkdir -p testdisk
   ../testdisk-7.2-WIP/configure  --disable-qt \
