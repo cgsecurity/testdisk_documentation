@@ -17,6 +17,8 @@ Log creation
  * Choose Create unless you have a reason to append data to the log or if you execute TestDisk from read only media and can't create it elsewhere.
  * Press Enter to proceed.
 
+If you have chosen to create the log file, TestDisk tries to create a file named :file:`testdisk.log` in the current directory.
+
 .. note::  Windows users, if you have difficulties to find the :file:`testdisk.log` file, consult https://support.microsoft.com/en-us/kb/865219 on how to show file name extensions in Windows Explorer.
 
 Disk selection
