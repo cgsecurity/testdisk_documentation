@@ -6,7 +6,7 @@ Linux: Installation of distribution package
 
 Arch Linux
 ----------
-TestDisk is available in the Extra repo from `Arch Linux <https://www.archlinux.org>`_.
+TestDisk is available in the Extra repo from `Arch Linux <https://archlinux.org>`_.
 As root,
 
 .. code-block:: none
@@ -43,7 +43,7 @@ To install TestDisk bundle on `ClearLinux <https://clearlinux.org/>`_, run
 Debian
 ------
 
-TestDisk is available for `Debian <https://debian.org>`_.
+TestDisk is available for `Debian <https://www.debian.org>`_.
 
 As root,
 
@@ -55,7 +55,7 @@ As root,
 Fedora
 ------
 
-TestDisk is available for `Fedora <https://www.fedoraproject.org>`_.
+TestDisk is available for `Fedora <https://getfedora.org/>`_.
 
 As root,
 
@@ -93,7 +93,7 @@ openSUSE
 
 Ubuntu
 ------
-As root on the `Ubuntu <https://www.ubuntu.com>`_ system,
+As root on the `Ubuntu <https://ubuntu.com>`_ system,
 
 .. code-block:: none
 

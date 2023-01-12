@@ -58,8 +58,8 @@ Decompress and compile them (Replace :file:`/User/kmaster` by the correct path)
   tar xzf e2fsprogs-1.46.2.tar.gz
   tar xzf ntfs-3g_ntfsprogs-2017.3.23.tgz
   tar xzf testdisk-7.2-WIP.tar.bz2
-  cd e2fsprogs-1.46.2 && configure && make && cd ..
-  cd ntfs-3g_ntfsprogs-2017.3.23 && /configure --disable-ntfs-3g --disable-nfconv && make && cd ..
+  cd e2fsprogs-1.46.2 && ./configure && make && cd ..
+  cd ntfs-3g_ntfsprogs-2017.3.23 && ./configure --disable-ntfs-3g --disable-nfconv && make && cd ..
   mkdir -p testdisk
   ../testdisk-7.2-WIP/configure  --disable-qt \
     --with-ext2fs-lib=/Users/kmaster/e2fsprogs-1.46.2/lib \
@@ -80,4 +80,4 @@ A DLL (:file:`cygwin1.dll`) provides substantial POSIX API functionality, such f
 
 MinGW-w64
 ^^^^^^^^^
-MinGW-w64 https://mingw-w64.org/ is a free and open source software development environment for creating Microsoft Windows applications. It provides GCC for Windows 64 & 32 bits.
+MinGW-w64 https://www.mingw-w64.org/ is a free and open source software development environment for creating Microsoft Windows applications. It provides GCC for Windows 64 & 32 bits.

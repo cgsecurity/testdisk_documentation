@@ -23,6 +23,8 @@ Available media are listed. Use up/down arrow keys to select the disk that holds
 
 Hint for macOS: If available, use raw device :file:`/dev/rdisk*` instead of :file:`/dev/disk*` for faster data transfer.
 
+.. warning:: macOS - If no disk is listed, select `System Settings` --> `Privacy & Security` --> `Full Disk Access` --> Enable for `Terminal` ( or `PhotoRec` itself)
+
 
 Source partition selection
 **************************
@@ -98,7 +100,7 @@ When the recovery is complete, a summary is displayed. Note that if you interrup
  * Windows: You may have disabled your live antivirus protection during the recovery to speed up the process, but it's recommended to scan the recovered files for viruses before opening them - PhotoRec may have undeleted an infected document or a Trojan.
  * Hint: When looking for a specific file. Sort your recovered files by extension and/or date/time. PhotoRec uses time information (metadata) when available in the file header to set the file modification time.
 
-.. note:: Windows - You may need to take ownership of the :file:`recup_dir.*` folders: https://technet.microsoft.com/en-us/library/Cc753659.aspx
+.. note:: Windows - You may need to take ownership of the :file:`recup_dir.*` folders: `https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753659(v=ws.11) <https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753659(v=ws.11)>`_
 
 .. note:: macOS / Linux - To change the owner of the files, run :command:`sudo chown -R username recup_dir.*`
 

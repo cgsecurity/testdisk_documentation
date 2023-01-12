@@ -21,7 +21,7 @@ The Python program `sort-PhotorecRecoveredFiles <https://github.com/tfrdidi/sort
 Renaming files using exiftool
 *****************************
 exiftool can use meta-data from several popular file formats to rename files.
-All Linux distributions comes with a package for :command:`exiftool` (file:`perl-Image-ExifTool` for Red Hat, CentOS and Fedora) but otherwise it is available for Windows, Linux and macOS from https://www.sno.phy.queensu.ca/~phil/exiftool/
+All Linux distributions comes with a package for :command:`exiftool` (file:`perl-Image-ExifTool` for Red Hat, CentOS and Fedora) but otherwise it is available for Windows, Linux and macOS from https://exiftool.org/
 
 
 .. code-block:: none

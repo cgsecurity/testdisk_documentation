@@ -117,6 +117,6 @@ Improved file recover
 **********************
 
 To control all aspects of the recovery (file content check, file size control, footer detection...),
-the best way to add a signature, if you are developer, is to `modify PhotoRec <http://www.cgsecurity.org/wiki/Developers#Adding_a_new_file_format_to_PhotoRec>`_ itself.
+the best way to add a signature, if you are developer, is to `modify PhotoRec <https://www.cgsecurity.org/wiki/Developers#Adding_a_new_file_format_to_PhotoRec>`_ itself.
 
 **Commercial support is also available from the author** grenier@cgsecurity.org.

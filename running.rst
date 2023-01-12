@@ -86,6 +86,8 @@ If your administrator account has no password (a blank password), you must give 
 
 Terminal doesn't show the password as you type. If you enter the wrong password or a blank password, the command isn't executed and Terminal asks you to try again.
 
+If no disk is listed when running TestDisk or PhotoRec, select `System Settings` --> `Privacy & Security` --> `Full Disk Access` --> Enable for `Terminal` ( or TestDisk and PhotoRec themself)
+
 .. _running_fidentify_win:
 
 Running Fidentify under Windows

@@ -192,4 +192,4 @@ Repairing BitLocker volume
 --------------------------
 
 :command:`Repair-bde` can reconstruct critical parts of the drive and salvage recoverable data as long as a valid recovery password or recovery key is used to decrypt the data.
-See https://technet.microsoft.com/en-us/library/ff829851(v=ws.11).aspx
+See `https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff829851(v=ws.11) <https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff829851(v=ws.11)>`_

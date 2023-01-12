@@ -14,11 +14,11 @@ Download Fedora "Image Live" from https://getfedora.org/fr/workstation/download/
 Windows
 -------
 
- *  Download and run `SUSE Studio ImageWriter <https://github.com/downloads/openSUSE/kiwi/ImageWriter.exe>`_ or `Rawrite32 <http://www.netbsd.org/~martin/rawrite32/>`_
- *  Choose the Fedora image as the **Image** (SUSE Studio) or **Filesystem image** (Rawrite32) - if the image file is not shown, you may have to change the file selector options or change the image's extension
- *  Choose the USB stick in the drop-down box by the **Copy** button (SUSE Studio) or as the **Target** (Rawrite32)
+ *  Download and run `Rawrite32 <http://www.netbsd.org/~martin/rawrite32/>`_
+ *  Choose the Fedora image as the **Filesystem image** - if the image file is not shown, you may have to change the file selector options or change the image's extension
+ *  Choose the USB stick as the **Target**
  *  Double-check you're really, really sure you don't need any of the data on the USB stick!
- *  Click **Copy** (SUSE Studio) or **Write to disk...** (Rawrite32)
+ *  Click **Write to disk...**
  *  Wait for the operation to complete,
 
 Linux (command line)
@@ -67,4 +67,4 @@ Starting from the USB stick
 Plug the USB key on the damaged computer and boot this computer, and do whatever you need to do to boot from a USB stick - often this will involve pressing or holding down **F12**, **F2** or **Del**.
 If you are using a Mac computer, hold down the left Alt/Option key to access the boot menu - you should see a Fedora logo. Click this to boot.
 
-Original source of this page: https://fedoraproject.org/wiki/How_to_create_and_use_Live_USB
+Original source of this page: https://docs.fedoraproject.org/en-US/quick-docs/creating-and-using-a-live-installation-image/index.html

@@ -37,7 +37,8 @@ Windows Vista/Windows 7/..., Windows Server 2008/...
  * Run :command:`bootrec.exe /fixboot` to repair NTFS boot sector.
 
 
-Boot Windows in safe mode or from a Windows DVD (Not the DVD from the computer manufacturer) as described in https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode and select
+Boot Windows in safe mode or from a Windows DVD (Not the DVD from the computer manufacturer) as described in https://support.microsoft.com/en-us/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234 and selec
+t and select
 
  * Troubleshoot
  * Advanced Options

@@ -19,7 +19,7 @@ Log creation
 
 If you have chosen to create the log file, TestDisk tries to create a file named :file:`testdisk.log` in the current directory.
 
-.. note::  Windows users, if you have difficulties to find the :file:`testdisk.log` file, consult https://support.microsoft.com/en-us/kb/865219 on how to show file name extensions in Windows Explorer.
+.. note::  Windows users, if you have difficulties to find the :file:`testdisk.log` file, in File Explorer under View, in the Show/hide group, select the File name extensions check box.
 
 Disk selection
 --------------
@@ -29,6 +29,8 @@ All hard drives should be detected and listed with the correct size by TestDisk.
  * Press Enter to Proceed.
 
 .. note:: macOS - If available, use raw device :file:`/dev/rdisk*` instead of :file:`/dev/disk*` for faster data transfer.
+
+.. warning:: macOS - If no disk is listed, select `System Settings` --> `Privacy & Security` --> `Full Disk Access` --> Enable for `Terminal` ( or `PhotoRec` itself)
 
 .. warning:: Windows - Do not select :file:`C:`, :file:`D:` or another drive letter. It's useless to search partitions inside a partition.
 
