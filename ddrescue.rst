@@ -7,6 +7,12 @@ Flash memory may also have "bad sectors" (even if technically there is no sector
 Instead of working directly on the damaged disk, it's recommended to create a copy and to work on the clone.
 Two possibilities: create a disk image (a file) or overwrite a new/empty disk.
 
+When cloning a disk to a healthy disk, the destination disk will remain healthy.
+There is no way to recreate the missing content (content that was stored in the sector that now failed to be read), so if the file that was using this sector is "recovered", it will be damaged/corrupted.
+
+.. warning:: Do not reformat a disk if you want to recover its content.
+   Do not reuse a disk with bad sectors. Reinstalling the OS or reformating the partition will at best hide the problem for a moment.
+
 ddrescue can be found for Linux or macOS. If your computer is using another operating system, no problem, create a Linux Live USB! (See :ref:`live-usb`)
 
 ddrescue on Linux
