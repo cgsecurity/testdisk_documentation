@@ -161,3 +161,8 @@ Decompress the archive, no need to be root
 
 
 List your files (:command:`ls`), a directory named :file:`testdisk-7.2-WIP` should has been created in the current working directory.
+
+.. warning:: The ready-to-use Linux binaries may not list correctly filenames from NTFS or exFAT filesystems.
+   These binaries provided on cgsecurity.org are static binaries.
+   Unfortunately, the GNU C Library’s iconv implementation uses shared loadable modules to implement the Unicode conversions.
+   iconv support need to be disabled otherwise the binaries will crash if the local glibc version don't match the glibc version used when compiling.
