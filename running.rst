@@ -36,7 +36,7 @@ Windows UAC (Vista and later) will ask you to confirm that you want to run the e
 Running TestDisk, PhotoRec under Linux
 **************************************
 
-You need to be root to run TestDisk.
+You need to be root to run TestDisk or PhotoRec, so they can access all your disks.
 
 .. code-block:: none
 
@@ -86,7 +86,7 @@ If your administrator account has no password (a blank password), you must give 
 
 Terminal doesn't show the password as you type. If you enter the wrong password or a blank password, the command isn't executed and Terminal asks you to try again.
 
-If no disk is listed when running TestDisk or PhotoRec, select `System Settings` --> `Privacy & Security` --> `Full Disk Access` --> Enable for `Terminal` ( or TestDisk and PhotoRec themself)
+If no disk is listed when running TestDisk or PhotoRec, select `System Settings` --> `Privacy & Security` --> `Full Disk Access` --> Use `+` to add `Terminal` ( or TestDisk and PhotoRec themself)
 
 .. _running_fidentify_win:
 

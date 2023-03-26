@@ -30,7 +30,7 @@ All hard drives should be detected and listed with the correct size by TestDisk.
 
 .. note:: macOS - If available, use raw device :file:`/dev/rdisk*` instead of :file:`/dev/disk*` for faster data transfer.
 
-.. warning:: macOS - If no disk is listed, select `System Settings` --> `Privacy & Security` --> `Full Disk Access` --> Enable for `Terminal` ( or `PhotoRec` itself)
+.. warning:: macOS - If no disk is listed, select `System Settings` --> `Privacy & Security` --> `Full Disk Access` --> Use `+` to add `Terminal` ( or `TestDisk` itself)
 
 .. warning:: Windows - Do not select :file:`C:`, :file:`D:` or another drive letter. It's useless to search partitions inside a partition.
 

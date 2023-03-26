@@ -23,7 +23,7 @@ Available media are listed. Use up/down arrow keys to select the disk that holds
 
 Hint for macOS: If available, use raw device :file:`/dev/rdisk*` instead of :file:`/dev/disk*` for faster data transfer.
 
-.. warning:: macOS - If no disk is listed, select `System Settings` --> `Privacy & Security` --> `Full Disk Access` --> Enable for `Terminal` ( or `PhotoRec` itself)
+.. warning:: macOS - If no disk is listed, select `System Settings` --> `Privacy & Security` --> `Full Disk Access` --> Use `+` to add `Terminal` ( or `PhotoRec` itself)
 
 
 Source partition selection
