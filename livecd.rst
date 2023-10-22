@@ -8,7 +8,7 @@ It's this later solution that will be presented here.
 You need an USB flash drive also known as USB stick, thumb drive, pen drive, or jump drive that you can erase.
 Note it's also possible to use a blank DVD.
 
-Download Fedora "Image Live" from https://getfedora.org/fr/workstation/download/
+Download Fedora "Image Live" from https://fedoraproject.org/fr/workstation/download/
 
 
 Windows

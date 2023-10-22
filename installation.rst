@@ -34,7 +34,7 @@ If epel repository is disabled on your CentOS, use
 ClearLinux
 ----------
 
-To install TestDisk bundle on `ClearLinux <https://clearlinux.org/>`_, run
+To install TestDisk bundle on `ClearLinux <https://www.clearlinux.org/>`_, run
 
 .. code-block:: none
 
@@ -55,7 +55,7 @@ As root,
 Fedora
 ------
 
-TestDisk is available for `Fedora <https://getfedora.org/>`_.
+TestDisk is available for `Fedora <https://fedoraproject.org/>`_.
 
 As root,
 
