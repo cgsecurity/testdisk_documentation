@@ -113,6 +113,10 @@ Run PhotoRec
 You are now ready to use PhotoRec with your custom signature to recover your files.
 If a signature file is present, PhotoRec will use it by default.
 
+.. warning::
+   If you are using a :file:`.photorec.sig` in your `HOME` directory, be warned that when running photorec as root (ie. via the :command:`sudo` command), photorec will search in :file:`/root/.photorec.sig`, not in your user home directory. So you may have to copy the :file:`.photorec.sig` file first.
+
+
 Improved file recover
 **********************
 
