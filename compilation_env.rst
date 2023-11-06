@@ -24,7 +24,8 @@ Linux
 
 macOS
 -----
-Install Xcode
+
+ * Using HomeBrew: ``brew install gcc``
 
 .. code-block:: none
 
