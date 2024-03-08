@@ -61,7 +61,7 @@ Decompress and compile them (Replace :file:`/User/kmaster` by the correct path)
   cd e2fsprogs-1.46.2 && ./configure && make && cd ..
   cd ntfs-3g_ntfsprogs-2017.3.23 && ./configure --disable-ntfs-3g --disable-nfconv && make && cd ..
   mkdir -p testdisk
-  ../testdisk-7.2-WIP/configure  --disable-qt \
+  LDFLAGS="-framework CoreFoundation" ../testdisk-7.2-WIP/configure  --disable-qt \
     --with-ext2fs-lib=/Users/kmaster/e2fsprogs-1.46.2/lib \
     --with-ext2fs-includes=/Users/kmaster/e2fsprogs-1.46.2/lib \
     --with-ntfs3g-lib=/Users/kmaster/ntfs-3g_ntfsprogs-2017.3.23/libntfs-3g/.libs/ \
